@@ -93,7 +93,7 @@ git config --global user.name "rrl-katch"
 
 git config --global user.email "rrl.katch@gmail.com"
 
-git update-index --skip-worktree start_app.bat
+⚠️ **IMPORTANT:** After cloning the repository, copy the contents of `start_app.bat` and create a new file named `start_app_rrl.bat` in the same directory. Use `start_app_rrl.bat` for all local modifications. Do not edit `start_app.bat` directly, as it is version-controlled and may be overwritten during updates.
 
 ---
 
