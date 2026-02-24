@@ -61,7 +61,7 @@ If D drive does not exist, create it.
 
 Open:
 
-D:\xampp\php\php.ini
+D:\xampp\php\php.ini OR open xampp-control.exe and Apache -> Configure -> php.ini
 
 Find:
 
@@ -90,7 +90,10 @@ When prompted:
 Configure Git (One-Time Setup):
 
 git config --global user.name "rrl-katch"
+
 git config --global user.email "rrl.katch@gmail.com"
+
+git update-index --skip-worktree start_app.bat
 
 ---
 
