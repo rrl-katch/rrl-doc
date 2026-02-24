@@ -130,6 +130,8 @@ Import the database:
 - Choose file: rrl_database.sql (inside project folder)
 - Click Go
 
+Open Admin panel and Set-up the printer
+
 ---
 
 ## 6️⃣ Start Application
