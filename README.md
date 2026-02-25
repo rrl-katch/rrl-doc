@@ -132,6 +132,8 @@ Import the database:
 
 Open Admin panel and Set-up the printer
 
+Double click on setup.bat file for set-up.
+
 ---
 
 ## 6️⃣ Start Application
