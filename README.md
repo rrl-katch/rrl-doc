@@ -81,6 +81,8 @@ Open Command Prompt and run:
 
 cd D:\xampp\htdocs
 
+git config --global credential.helper manager-core
+
 git clone https://github.com/rrl-katch/rrl.git
 
 When prompted:
