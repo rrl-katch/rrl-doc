@@ -93,7 +93,9 @@ git config --global user.name "rrl-katch"
 
 git config --global user.email "rrl.katch@gmail.com"
 
-⚠️ **IMPORTANT:** After cloning the repository, update the lock station in start_app_rrl.bat file.
+Double click on setup.bat file for set-up.
+
+- After cloning the repository, update the lock station in start_app_rrl.bat file.
 
 ---
 
@@ -131,8 +133,6 @@ Import the database:
 - Click Go
 
 Open Admin panel and Set-up the printer
-
-Double click on setup.bat file for set-up.
 
 ---
 
