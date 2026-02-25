@@ -1,220 +1,210 @@
 # 🚌 RRL Bus Ticketing System
 
-Professional Bus Ticket Booking & Management System.
+**Professional Bus Ticket Booking & Management Platform**
 
-The system contains only two panels:
+A secure, high-performance ticketing system designed for transport
+operators to manage station bookings, ticket issuance, settlements, and
+centralized administration.
 
-1. 🎫 Station Booking Panel  
-2. ⚙️ Admin Panel  
+------------------------------------------------------------------------
 
----
+# 📘 Table of Contents
 
-## 📌 System Overview
+1.  System Architecture\
+2.  Panel Overview\
+3.  System Requirements\
+4.  Installation Guide\
+5.  Database Configuration\
+6.  Application Launch\
+7.  Panel Access URLs\
+8.  Project Structure\
+9.  Daily Development Workflow\
+10. Troubleshooting Guide\
+11. Environment Specifications\
+12. Final Setup Checklist
 
-### 🎫 Station Booking Panel
-Used for:
-- Ticket booking
-- Ticket printing with QR Code
-- Duplicate ticket print
-- Daily summary
-- Settlement management
+------------------------------------------------------------------------
 
-### ⚙️ Admin Panel
-Used for:
-- Station management
-- Agent management
-- Route & fare configuration
-- Reports & summaries
-- System settings
+# 🏗 System Architecture
 
----
+The system consists of two operational panels:
 
-# 🚀 Project Setup Guide
+-   🎫 Station Booking Panel (Operational Use)
+-   ⚙️ Admin Panel (Administrative Control)
+
+Each panel is role-based and designed for specific operational
+responsibilities.
+
+------------------------------------------------------------------------
+
+# 🎫 Panel Overview
+
+## 1️⃣ Station Booking Panel
+
+### Key Features
+
+-   Ticket booking with real-time validation
+-   Thermal ticket printing with QR Code
+-   Duplicate ticket reprint
+-   Daily transaction summary
+-   Settlement and reconciliation management
+-   Agent-based booking tracking
+
+------------------------------------------------------------------------
+
+## 2️⃣ ⚙️ Admin Panel
+
+### Key Capabilities
+
+-   Station management
+-   Agent management
+-   Route configuration
+-   Fare management
+-   System-wide reports & summaries
+-   Printer configuration
+-   System settings & controls
+
+------------------------------------------------------------------------
+
+# 💻 System Requirements
+
+## Minimum Requirements
+
+-   Windows OS (Recommended: Windows 10/11)
+-   PHP 7.4
+-   MySQL (via XAMPP)
+-   Apache Server
+-   Git
+
+## Recommended Installation Path
+
+D:`\xampp`{=tex}
+
+------------------------------------------------------------------------
+
+# 🚀 Installation Guide
 
 ## 1️⃣ Install Git
 
-Download & Install Git:
-
-https://github.com/git-for-windows/git/releases/download/v2.53.0.windows.1/Git-2.53.0-64-bit.exe
-
-After installation, verify installation by running:
+Verify installation:
 
 git --version
 
----
+------------------------------------------------------------------------
 
-## 2️⃣ Install XAMPP (IMPORTANT)
+## 2️⃣ Install XAMPP (MANDATORY)
 
-Download XAMPP 7.4.1:
+Install to:
 
-https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.4.1/xampp-windows-x64-7.4.1-1-VC15-installer.exe/download
+D:`\xampp`{=tex}
 
-### Recommended Installation Path:
+------------------------------------------------------------------------
 
-D:\xampp
-
-If D drive does not exist, create it.
-
----
-
-## 3️⃣ Enable Required PHP Extension
+## 3️⃣ Enable Required PHP Extension (intl)
 
 Open:
 
-D:\xampp\php\php.ini OR open xampp-control.exe and Apache -> Configure -> php.ini
+D:`\xampp`{=tex}`\php`{=tex}`\php`{=tex}.ini
 
 Find:
 
 ;extension=intl
 
-Remove the semicolon to enable:
+Change to:
 
 extension=intl
 
-Restart Apache after saving.
+Restart Apache.
 
----
+------------------------------------------------------------------------
 
 ## 4️⃣ Clone the Project
 
-Open Command Prompt and run:
+cd D:`\xampp`{=tex}`\htdocs  `{=tex} git clone
+https://github.com/rrl-katch/rrl.git
 
-cd D:\xampp\htdocs
+Configure Git:
 
-git clone https://github.com/rrl-katch/rrl.git
-
-When prompted:
-- Enter provided username
-- Enter provided Git Token (NOT password)
-
-Configure Git (One-Time Setup):
-
-git config --global user.name "rrl-katch"
-
+git config --global user.name "rrl-katch"\
 git config --global user.email "rrl.katch@gmail.com"
 
-Double click on setup.bat file for set-up.
+Run:
 
-- After cloning the repository, update the lock station in start_app_rrl.bat file.
+setup.bat
 
----
+Project must be located at:
 
-⚠️ If the project is not installed inside:
+D:`\xampp`{=tex}`\htdocs`{=tex}`\rrl`{=tex}
 
-D:\xampp\htdocs\rrl
+------------------------------------------------------------------------
 
-You must update:
-- start_app.bat
-- Any hardcoded project paths
+# 🗄 Database Configuration
 
----
+1.  Start Apache & MySQL\
+2.  Open http://localhost/phpmyadmin/\
+3.  Create database: rrl\
+4.  Import rrl_database.sql
 
-## 5️⃣ Database Setup
+------------------------------------------------------------------------
 
-Start XAMPP:
-- Start Apache
-- Start MySQL
+# ▶️ Application Launch
 
-Open:
-
-http://localhost/phpmyadmin/
-
-Create a database named:
-
-rrl
-
-Click Create.
-
-Import the database:
-
-- Select database rrl
-- Click Import
-- Choose file: rrl_database.sql (inside project folder)
-- Click Go
-
-Open Admin panel and Set-up the printer
-
----
-
-## 6️⃣ Start Application
-
-Open in browser:
-
+Station Panel:\
 http://localhost/rrl/
 
----
-
-# 🔐 Panel URLs
-
-Station Booking Panel:
-http://localhost/rrl/
-
-Admin Panel:
+Admin Panel:\
 http://localhost/rrl/admin
 
-(Default credentials will be provided separately.)
+------------------------------------------------------------------------
 
----
+# 📁 Project Structure
 
-# 📁 Important Folders
+rrl/ │ ├── application/ ├── public/uploads/qrcode/ ├── start_app.bat ├──
+setup.bat └── rrl_database.sql
 
-public/uploads/qrcode/   → Ticket QR Code Images  
-application/             → Core Application Logic  
-start_app.bat            → Auto Start Script  
-
----
+------------------------------------------------------------------------
 
 # 🛠 Daily Development Workflow
 
-Before starting work each day:
-
-git fetch origin
+git fetch origin\
 git reset --hard origin/main
 
-(If using start_app.bat, this runs automatically.)
+------------------------------------------------------------------------
 
----
+# 🔄 Troubleshooting
 
-# 🔄 Common Issues
+Apache Not Starting: - Check Port 80 conflict - Stop IIS
 
-Apache Not Starting:
-- Check if Port 80 is already in use
-- Stop IIS if enabled
+MySQL Not Starting: - Ensure no other MySQL service is running
 
-MySQL Not Starting:
-- Ensure no other MySQL service is running
+Database Error: - Confirm database name is rrl - Ensure MySQL is running
 
-404 Error:
-Ensure project path is:
-D:\xampp\htdocs\rrl
+intl Error: - Ensure extension=intl is enabled - Restart Apache
 
-Database Error:
-- Confirm database name is rrl
-- Ensure MySQL is running
+------------------------------------------------------------------------
 
----
+# 📦 Environment Specifications
 
-# 📦 Environment Details
+PHP: 7.4\
+Framework: CodeIgniter\
+Server: Apache\
+Environment: Localhost
 
-PHP Version: 7.4  
-MySQL: XAMPP Default  
-Framework: CodeIgniter  
-Environment: Localhost  
-
----
+------------------------------------------------------------------------
 
 # ✅ Setup Checklist
 
-✔ Git Installed  
-✔ XAMPP Installed in D Drive  
-✔ intl Extension Enabled  
-✔ Project Cloned in htdocs  
-✔ Database Created (rrl)  
-✔ SQL Imported  
-✔ Apache & MySQL Running  
-✔ Application Accessible  
+✔ Git Installed\
+✔ XAMPP Installed\
+✔ intl Extension Enabled\
+✔ Project Cloned\
+✔ Database Created\
+✔ SQL Imported\
+✔ Apache Running\
+✔ MySQL Running\
+✔ Application Accessible
 
----
+------------------------------------------------------------------------
 
 # 🚌 RRL Bus Ticketing System
 
