@@ -10,18 +10,18 @@ centralized administration.
 
 # 📘 Table of Contents
 
-1.  System Architecture\
-2.  Panel Overview\
-3.  System Requirements\
-4.  Installation Guide\
-5.  Database Configuration\
-6.  Application Launch\
-7.  Panel Access URLs\
-8.  Project Structure\
-9.  Daily Development Workflow\
-10. Troubleshooting Guide\
-11. Environment Specifications\
-12. Final Setup Checklist
+-   [System Architecture](#-system-architecture)
+-   [Panel Overview](#-panel-overview)
+-   [System Requirements](#-system-requirements)
+-   [Installation Guide](#-installation-guide)
+-   [Database Configuration](#-database-configuration)
+-   [Application Launch](#-application-launch)
+-   [Panel Access URLs](#-panel-access-urls)
+-   [Project Structure](#-project-structure)
+-   [Daily Development Workflow](#-daily-development-workflow)
+-   [Troubleshooting Guide](#-troubleshooting-guide)
+-   [Environment Specifications](#-environment-specifications)
+-   [Final Setup Checklist](#-final-setup-checklist)
 
 ------------------------------------------------------------------------
 
@@ -39,7 +39,7 @@ responsibilities.
 
 # 🎫 Panel Overview
 
-## 1️⃣ Station Booking Panel
+## Station Booking Panel
 
 ### Key Features
 
@@ -52,7 +52,7 @@ responsibilities.
 
 ------------------------------------------------------------------------
 
-## 2️⃣ ⚙️ Admin Panel
+## ⚙️ Admin Panel
 
 ### Key Capabilities
 
@@ -171,15 +171,26 @@ git reset --hard origin/main
 
 ------------------------------------------------------------------------
 
-# 🔄 Troubleshooting
+# 🔄 Troubleshooting Guide
 
-Apache Not Starting: - Check Port 80 conflict - Stop IIS
+### Apache Not Starting
 
-MySQL Not Starting: - Ensure no other MySQL service is running
+-   Check Port 80 conflict
+-   Stop IIS
 
-Database Error: - Confirm database name is rrl - Ensure MySQL is running
+### MySQL Not Starting
 
-intl Error: - Ensure extension=intl is enabled - Restart Apache
+-   Ensure no other MySQL service is running
+
+### Database Error
+
+-   Confirm database name is rrl
+-   Ensure MySQL is running
+
+### intl Error
+
+-   Ensure extension=intl is enabled
+-   Restart Apache
 
 ------------------------------------------------------------------------
 
@@ -192,7 +203,7 @@ Environment: Localhost
 
 ------------------------------------------------------------------------
 
-# ✅ Setup Checklist
+# ✅ Final Setup Checklist
 
 ✔ Git Installed\
 ✔ XAMPP Installed\
