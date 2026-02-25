@@ -81,7 +81,10 @@ Open Command Prompt and run:
 
 cd D:\xampp\htdocs
 
-git config --global credential.helper manager-core
+git config --global --unset credential.helper
+
+git config --global credential.helper wincred
+
 
 git clone https://github.com/rrl-katch/rrl.git
 
